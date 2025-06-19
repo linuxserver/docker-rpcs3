@@ -1,0 +1,30 @@
+---
+
+# jenkins variables
+project_name: docker-rpcs3
+external_type: github_stable
+release_type: stable
+release_tag: latest
+ls_branch: master
+build_armhf: false
+repo_vars:
+  - EXT_GIT_BRANCH = 'master'
+  - EXT_USER = 'RPCS3'
+  - EXT_REPO = 'rpcs3-binaries-linux'
+  - BUILD_VERSION_ARG = 'RPCS3_VERSION'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-rpcs3'
+  - CONTAINER_NAME = 'rpcs3'
+  - DOCKERHUB_IMAGE = 'linuxserver/rpcs3'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/rpcs3'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/rpcs3'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH = 'true'
+  - CI = 'true'
+  - CI_WEB = 'true'
+  - CI_PORT = '3001'
+  - CI_SSL = 'true'
+  - CI_DELAY = '120'
+  - CI_DOCKERENV = 'TZ=US/Pacific'
+  - CI_AUTH = 'user:password'
+  - CI_WEBPATH = ''
