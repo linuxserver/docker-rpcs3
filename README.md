@@ -220,8 +220,6 @@ services:
   rpcs3:
     image: lscr.io/linuxserver/rpcs3:latest
     container_name: rpcs3
-    security_opt:
-      - seccomp:unconfined #optional
     environment:
       - PUID=1000
       - PGID=1000
@@ -240,7 +238,6 @@ services:
 ```bash
 docker run -d \
   --name=rpcs3 \
-  --security-opt seccomp=unconfined `#optional` \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Etc/UTC \
@@ -265,7 +262,6 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
 | `-v /config` | Users home directory in the container, stores local files and settings |
 | `--shm-size=` | This is needed for RPCS3 to function. |
-| `--security-opt seccomp=unconfined` | For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker. |
 
 ## Environment variables from files (Docker secrets)
 
@@ -429,4 +425,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **22.09.25:** - Rebase to Debian Trixie.
 * **19.06.25:** - Initial release.
