@@ -2,7 +2,8 @@
 
 # jenkins variables
 project_name: docker-rpcs3
-external_type: github_stable
+external_type: na
+custom_version_command: "echo v0.0.37-18156-6451c4d4"
 release_type: stable
 release_tag: latest
 ls_branch: master

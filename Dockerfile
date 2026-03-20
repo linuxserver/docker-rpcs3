@@ -23,7 +23,7 @@ RUN \
     | awk -F '(": "|")' '/browser.*AppImage/ {print $3}') && \
   curl -o \
     /tmp/rpcs3.app -L \
-    "${DOWNLOAD_URL}" && \
+    "https://github.com/RPCS3/rpcs3-binaries-linux/releases/download/build-6451c4d49fdf87380df65bd834d6582a1b6acde6/rpcs3-v0.0.37-18156-6451c4d4_linux64.AppImage" && \
   cd /tmp && \
   chmod +x rpcs3.app && \
   ./rpcs3.app --appimage-extract && \
