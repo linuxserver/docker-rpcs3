@@ -11,7 +11,8 @@ LABEL maintainer="thelamer"
 
 # title
 ENV TITLE=RPCS3 \
-    SDL_JOYSTICK_DEVICE=/dev/input/js0
+    SDL_JOYSTICK_DEVICE=/dev/input/js0 \
+    PIXELFLUX_WAYLAND=true
 
 RUN \
   echo "**** add icon ****" && \
