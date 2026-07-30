@@ -35,6 +35,8 @@ app_setup_block: |
   The application can be accessed at:
 
   * https://yourhost:3001/
+
+  **Note: for gamepads to function select SDL as the gamepad driver under "Handlers".**
 # init diagram
 init_diagram: |
   "rpcs3:latest": {
@@ -107,6 +109,7 @@ init_diagram: |
   "rpcs3:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "30.07.26:", desc: "Start ingesting head appimage again, add notes on using SDL for controller support."}
   - {date: "20.03.26:", desc: "Pin back to latest v0.0.37 build to function, make Wayland default disable with PIXELFLUX_WAYLAND=false."}
   - {date: "20.12.25:", desc: "Add Wayland init logic."}
   - {date: "22.09.25:", desc: "Rebase to Debian Trixie."}
