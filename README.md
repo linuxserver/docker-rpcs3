@@ -60,6 +60,8 @@ The application can be accessed at:
 
 * https://yourhost:3001/
 
+**Note: for gamepads to function select SDL as the gamepad driver under "Handlers".**
+
 ### Strict reverse proxies
 
 This image uses a self-signed certificate by default. This naturally means the scheme is `https`.
@@ -643,6 +645,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **30.07.26:** - Start ingesting head appimage again, add notes on using SDL for controller support.
 * **20.03.26:** - Pin back to latest v0.0.37 build to function, make Wayland default disable with PIXELFLUX_WAYLAND=false.
 * **20.12.25:** - Add Wayland init logic.
 * **22.09.25:** - Rebase to Debian Trixie.
