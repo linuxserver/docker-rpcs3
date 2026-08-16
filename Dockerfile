@@ -21,7 +21,7 @@ RUN \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/rpcs3-logo.png && \
   echo "**** install packages ****" && \
   DOWNLOAD_URL=$(curl -sX GET "https://api.github.com/repos/RPCS3/rpcs3-binaries-linux/releases/latest" \
-    | awk -F '(": "|")' '/browser.*AppImage/ {print $3}') && \
+    | jq -r 'first(.assets[].browser_download_url | select(test("AppImage")))') && \
   curl -o \
     /tmp/rpcs3.app -L \
     "${DOWNLOAD_URL}" && \
