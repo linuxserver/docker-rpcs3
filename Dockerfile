@@ -31,6 +31,7 @@ RUN \
   mv \
     AppDir \
     /opt/rpcs3 && \
+  find /opt/rpcs3 -type d -exec chmod 755 {} + && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
